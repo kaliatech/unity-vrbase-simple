@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.XR.Interaction.Toolkit;
 
 public class TestAction : MonoBehaviour
 {
@@ -16,9 +17,10 @@ public class TestAction : MonoBehaviour
         
     }
     
-    void Test()
+    public void Test(HoverEnterEventArgs args)
     {
         Debug.Log("-----------------TEST-----------------");
+        Debug.Log(args.interactableObject.ToString());
     }
    
 }
